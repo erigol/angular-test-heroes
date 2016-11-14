@@ -1,0 +1,31 @@
+<h1>  {{title}}</h1>
+<!--<h4> My Heroes</h4>
+
+<ul> 
+  <li>  <span class="badge">one</span> two</li> 
+</ul> 
+-->
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" 
+     [class.selected]="hero === selHero"
+    (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+
+  <my-hero-detail [hero]="selHero"></my-hero-detail>
+<!--
+<div *ngIf="hero">
+    <h2> {{hero.name}} details ! </h2>
+    <div><label>id: </label>{{hero.id}}</div>
+       <div>
+        <label>name: </label> 
+        <input type="text" [(ngModel)]="hero.name" placeholder="Please write name"> <br>
+
+      </div>
+
+</div>
+
+-->
+
