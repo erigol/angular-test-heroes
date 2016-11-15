@@ -1,4 +1,4 @@
-<h1>  {{title}}</h1>
+<!-- <h1>  {{title}}</h1> -->
 <!--<h4> My Heroes</h4>
 
 <ul> 
@@ -14,7 +14,15 @@
   </li>
 </ul>
 
-  <my-hero-detail [hero]="selHero"></my-hero-detail>
+<!--   <my-hero-detail [hero]="selHero"></my-hero-detail> -->
+<!-- mini version -->
+<div *ngIf="selHero">
+  <h2>
+    {{selHero.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
 <!--
 <div *ngIf="hero">
     <h2> {{hero.name}} details ! </h2>

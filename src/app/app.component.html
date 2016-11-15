@@ -1,3 +1,9 @@
 
 <h1>{{title}}</h1>
-<my-heroes></my-heroes>
+<nav>
+    <a routerLink="/dashboard" routerLinkActive="active" >Dashboard</a> 
+    <a routerLink="/heroes" routerLinkActive="active" >Heroes</a> <!-- anchor tag,when pressing Herroes  go to /heroes -->
+</nav>
+
+<router-outlet></router-outlet>
+<!-- adding link above <my-heroes></my-heroes> -->
